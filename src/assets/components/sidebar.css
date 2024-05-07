@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    width: 200px;
+    height: 100%;
+    
+    padding: 0 1rem;
+    background-color: rgba(128, 128, 128, 0.088);
+}
+.logo img  {
+    width: 30px;
+    
+}
+.side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    font-weight: 300;
+    transition: 0.2s ease;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.side:hover {
+    background-color: rgba(128, 128, 128, 0.084);
+}
+.side h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    color: rgba(0, 0, 0, 0.445);
+}
+.side i {
+    color: rgba(0, 0, 0, 0.249);
+}
+.profileImage {
+    width: 20px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.notes h6 {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.445);
+    
+}
