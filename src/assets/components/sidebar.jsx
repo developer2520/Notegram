@@ -8,9 +8,12 @@ import Settings from './settings.jsx'
 
 export default function sidebar(){
   const [notes, setNotes] = useState([])
+  const [search, setSearch] = useState('')
   const [selectedNote, setSelectedNote] = useState(null);
   const [newNote,setNewNote] = useState(false)
   const [settings, setSettings] = useState(false)
+
+  console.log(search)
 
   const handleTitleClick = (note) => {
     setSelectedNote(note); // Set the selected note in the state
@@ -42,7 +45,7 @@ export default function sidebar(){
             <img className='profileImage' src={Durov} alt=" " />
             <h1>Durov's Notion</h1>
         </div>
-        <div className="search side"><i class="fa-solid fa-magnifying-glass"></i><h1>Search</h1>    </div>
+        <div className="search side"><i class="fa-solid fa-magnifying-glass"></i>   <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search'/>  </div>
         <button className="settings side" onClick={toggleSetting}><i class="fa-solid fa-gear"></i> <h1>Settings</h1></button>
         <button className="newNote side" onClick={toggleNote}><i class="fa-regular fa-square-plus"></i><h1>New </h1></button>
        

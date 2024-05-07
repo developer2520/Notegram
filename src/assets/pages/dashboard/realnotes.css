@@ -1,0 +1,58 @@
+body {
+  background-color: #E8E8E6;
+}
+
+.category {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+.category button {
+  width: unset;
+  background-color: rgba(128, 128, 128, 0.502);
+  height: 40px;
+}
+
+.notee {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.notes_div {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: repeat(3, 0.8fr);
+  grid-template-rows: repeat(3, 200px);
+  /* Change the height as needed */
+  gap: 20px;
+}
+.noteDate {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  bottom: 10px;
+  font-style: italic;
+}
+.topOfNote {
+  display: flex;
+  justify-content: space-between;
+}
+.topOfNote i {
+  color: rgba(0, 0, 0, 0.382);
+}.topOfNote i:hover {
+  color: black;
+}
+.ellipsis {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+}
+.ellipsis:hover {
+  background-color: rgba(128, 128, 128, 0.092);
+}

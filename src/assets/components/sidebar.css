@@ -23,6 +23,14 @@
     border-radius: 3px;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    background-color: #DFDFDD;
+}
+.side input {
+    background-color: #DFDFDD;
+    border: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+    outline: none;
 }
 .side:hover {
     background-color: rgba(128, 128, 128, 0.084);

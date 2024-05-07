@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Note from './note.jsx'
 import '../dashboard/notes.jsx'
+import './realnotes.css'
 
 export default function realnotes() {
 
@@ -96,7 +97,16 @@ export default function realnotes() {
         setNotes([...notes, todo]);
       };
   return (
-    <div>
+    <>
+    <div className="main_grid">
+    <div className="category">
+      <button>All</button>
+      <button>Today</button>
+      <button>This Week</button>
+      <button>Older</button>
+
+    </div>
+    <div className='notes_div'>
         {fileNotes.map((note, key) => (
       <div className='notee' key={note.title}>
         <Note note={note} />
@@ -105,5 +115,10 @@ export default function realnotes() {
 
 
     </div>
+
+      
+    </div>
+    
+    </>
   )
 }

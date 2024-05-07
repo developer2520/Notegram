@@ -4,12 +4,22 @@ import React from 'react';
 function Note({ note }) {
   return (
     <div className="note-details">
+      <div className="topOfNote">
       <h2>{note.title}</h2>
-      <p><strong>Date:</strong> {note.date}</p>
-      <p><strong>Description:</strong> {note.description}</p>
+      <div className="ellipsis">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+
+      </div>
+   
+
+      </div>
+      
+     
+      <p> {note.description}</p>
       {/* You can include other details like image, emoji, etc. if needed */}
-      <img src={note.img} alt="Note Image" />
-      <p><strong>Emoji:</strong> {note.emoji}</p>
+      {/*    */}
+      {/* <p><strong>Emoji:</strong> {note.emoji}</p> */}
+      <p className='noteDate'><strong></strong> {note.date}</p>
     </div>
   );
 }
