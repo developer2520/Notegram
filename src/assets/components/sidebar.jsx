@@ -7,6 +7,7 @@ import NewNote from './newNote.jsx'
 import Settings from './settings.jsx'
 
 export default function sidebar(){
+  const [notes, setNotes] = useState([])
   const [selectedNote, setSelectedNote] = useState(null);
   const [newNote,setNewNote] = useState(false)
   const [settings, setSettings] = useState(false)
