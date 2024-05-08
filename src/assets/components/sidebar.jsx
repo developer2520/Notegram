@@ -6,7 +6,7 @@ import Notes from '../pages/dashboard/notes.jsx'
 import NewNote from './newNote.jsx'
 import Settings from './settings.jsx'
 
-export default function sidebar(){
+export default function sidebar({ addNote }){
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState('')
   const [selectedNote, setSelectedNote] = useState(null);
@@ -29,7 +29,7 @@ export default function sidebar(){
     setNewNote(false)
 
   } 
-
+ 
   
   
 
@@ -49,7 +49,7 @@ export default function sidebar(){
         <button className="settings side" onClick={toggleSetting}><i class="fa-solid fa-gear"></i> <h1>Settings</h1></button>
         <button className="newNote side" onClick={toggleNote}><i class="fa-regular fa-square-plus"></i><h1>New </h1></button>
        
-        {newNote && <NewNote />}
+        {newNote && <NewNote addNote={addNote} />}
         {settings && <Settings />}
 
         

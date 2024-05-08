@@ -3,7 +3,7 @@ import React from 'react';
 
 function Note({ note }) {
   return (
-    <div className="note-details">
+    <div className="notee">
       <div className="topOfNote">
       <h2>{note.title}</h2>
       <div className="ellipsis">
