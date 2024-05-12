@@ -48,6 +48,8 @@ export default function sidebar({ addNote }){
         <div className="search side"><i class="fa-solid fa-magnifying-glass"></i>   <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search'/>  </div>
         <button className="settings side" onClick={toggleSetting}><i class="fa-solid fa-gear"></i> <h1>Settings</h1></button>
         <button className="newNote side" onClick={toggleNote}><i class="fa-regular fa-square-plus"></i><h1>New </h1></button>
+        <button className="Favourite side" onClick={toggleNote}><i class="fa-regular fa-heart"></i><h1>Favourite </h1></button>
+       
        
         {newNote && <NewNote addNote={addNote} />}
         {settings && <Settings />}

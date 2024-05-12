@@ -1,7 +1,38 @@
 import React, { useState } from 'react';
 import './newnote.css';
+import { useDispatch } from 'react-redux';
+import { addNote } from '../features/Notes.js'
+import { format } from 'date-fns'
+import { current } from '@reduxjs/toolkit';
+
+// import { format }
 
 export default function NewNote() {
+
+  const dispatch = useDispatch()
+
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
+  const [date, setDate] = useState('')
+  const [category, setCategory] = useState()
+
+
+  const formatDate = () => {
+    const currentDate = Date()
+    const formattedDate = format(currentDate, 'dd-MM-yyyy')
+
+    setDate(formattedDate)
+  }
+  useState(() => {
+    formatDate();
+  }, []);
+
+  // const submitAndClose = () => {
+  //   {dispatch(addNote())}
+
+  // }
+ 
+  
   // const [title, setTitle] = useState('');
   // const [text, setText] = useState('');
 
@@ -37,21 +68,22 @@ export default function NewNote() {
           <input
             className="titleInput"
             type="text"
-            value={title}
-            onChange={handleTitleChange}
+            onChange={(event) => {setTitle(event.target.value)}}
+            
+           
             placeholder="write title"
           />
         </div>
         <div className="main_text">
           <textarea
             className="textInput"
-            value={text}
-            onChange={handleTextChange}
+            onChange={(event) => {setDescription(event.target.value)}}
+           
             placeholder="Write the main text"
           />
         </div>
       </div>
-      <button onClick={handleSubmit}>Save</button>
+      <button onClick={() => {dispatch(addNote({id: notes[notes.length - 1], title, description, date}))}} >Save</button>
     </div>
   );
 }

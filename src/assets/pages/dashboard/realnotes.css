@@ -15,6 +15,7 @@ body {
 
 .notee {
   padding: 1rem;
+  width: 300px;
   border-radius: 1rem;
   background-color: rgb(255, 255, 255);
   position: relative;
@@ -37,6 +38,7 @@ body {
 }
 .topOfNote {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .topOfNote i {

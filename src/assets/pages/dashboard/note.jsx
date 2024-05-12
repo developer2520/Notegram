@@ -1,18 +1,30 @@
 // NoteDetails.jsx
-import React from 'react';
+import {React, useState} from 'react';
+import NoteMore from '../../components/noteMore.jsx'
 
 function Note({ note }) {
+
+  const [settings, setSettings] = useState(false)
+
+  const toggleSettings = () => {
+    setSettings(true)
+    setSettings(!settings)
+  }
+  
+  
   return (
     <div className="notee">
       <div className="topOfNote">
       <h2>{note.title}</h2>
-      <div className="ellipsis">
+      <button onClick={toggleSettings} className="ellipsis">
       <i class="fa-solid fa-ellipsis-vertical"></i>
 
-      </div>
+      </button>
    
 
       </div>
+
+      {settings &&  <NoteMore /> }
       
      
       <p> {note.description}</p>
