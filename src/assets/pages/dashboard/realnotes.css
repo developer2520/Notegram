@@ -58,3 +58,11 @@ body {
 .ellipsis:hover {
   background-color: rgba(128, 128, 128, 0.092);
 }
+
+.note_description{
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}

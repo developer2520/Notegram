@@ -8,7 +8,7 @@ export default function noteMore() {
 
    
     <div className='notemore_div'>
-      <button onClick={() => {dispatch(deleteNote(id))}}>Delete</button>
+      <button onClick={() => {dispatch(deleteNote())}}>Delete</button>
     </div>
   )
 }

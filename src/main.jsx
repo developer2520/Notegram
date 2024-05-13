@@ -5,10 +5,16 @@ import './index.css'
 import { configureStore  } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import NotesReducer from './assets/features/Notes.js'
+import newnoteReducer from './assets/features/newnote.js'
+import { newnote } from './assets/features/newnote.js'
+import showSettingsReducer from './assets/features/showSettings.js'
+import {showSettings} from  './assets/features/showSettings.js'
 
 const store = configureStore({
   reducer: {
-    notes: NotesReducer
+    notes: NotesReducer,
+    newnote: newnoteReducer,
+    showSettings: showSettingsReducer
 
   }
 })

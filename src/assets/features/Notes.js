@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import NotesData from '../components/data.jsx';
+
 
 export const notesSlice = createSlice({
   name: "notes",
@@ -10,8 +10,11 @@ export const notesSlice = createSlice({
 
     },
     deleteNote: (state, action) => {
-      state.value = state.value.filter((user) => user.id != action.payload)
-    },
+      
+    }
+
+    
+    
   }
 })
 export const  { addNote, deleteNote } = notesSlice.actions

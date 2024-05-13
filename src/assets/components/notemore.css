@@ -18,6 +18,12 @@
 .notemore_div button {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
+  transition: 0.1s ease
+}
+.notemore_div button:hover {
+
+  background-color: #b5b4b409;
+
 }

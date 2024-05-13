@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addNote } from '../features/Notes.js'
 import { format } from 'date-fns'
 import { current } from '@reduxjs/toolkit';
+import {close} from '../features/newnote.js'
 
 // import { format }
 
@@ -26,6 +27,8 @@ export default function NewNote() {
   useState(() => {
     formatDate();
   }, []);
+
+  
 
   // const submitAndClose = () => {
   //   {dispatch(addNote())}
@@ -62,7 +65,11 @@ export default function NewNote() {
 
   return (
     <div className="note">
-      <h1>Write New Note</h1>
+      <div className="topofthenewnote">
+        <h1>Write new Note</h1>
+        <button onClick={() => dispatch(close())} className='x-button-close'><i className="fa-solid fa-circle-xmark"></i></button>
+        
+      </div>
       <div className="text">
         <div className="title">
           <input
@@ -83,7 +90,7 @@ export default function NewNote() {
           />
         </div>
       </div>
-      <button onClick={() => {dispatch(addNote({id: notes[notes.length - 1], title, description, date}))}} >Save</button>
+      <button onClick={() => {dispatch(addNote({id: crypto.randomUUID(), title, description, date})); dispatch(close())}} >Save</button>
     </div>
   );
 }

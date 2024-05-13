@@ -25,9 +25,9 @@ function App() {
       <Route path='login' element={<Login />} />
       <Route path='/sidebar' element={<SideBar/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
-      <Route path='newnote' element={<NewNote/>} />
-      <Route path='searchnote' element={<SearchNote/>} />
-      <Route path='data' element={<Data />} />
+      <Route path='/newnote' element={<NewNote/>} />
+      <Route path='/searchnote' element={<SearchNote/>} />
+      <Route path='/data' element={<Data />} />
       <Route path='/notes' element={<Notes />} />
       <Route path='/test' element={<Test />} />
       

@@ -16,8 +16,8 @@ function Note({ note }) {
     <div className="notee">
       <div className="topOfNote">
       <h2>{note.title}</h2>
-      <button onClick={toggleSettings} className="ellipsis">
-      <i class="fa-solid fa-ellipsis-vertical"></i>
+      <button onClick={toggleSettings}  className="ellipsis">
+      <i className="fa-solid fa-ellipsis-vertical"></i>
 
       </button>
    
@@ -27,7 +27,7 @@ function Note({ note }) {
       {settings &&  <NoteMore /> }
       
      
-      <p> {note.description}</p>
+      <p className='note_description'> {note.description}</p>
       {/* You can include other details like image, emoji, etc. if needed */}
       {/*    */}
       {/* <p><strong>Emoji:</strong> {note.emoji}</p> */}

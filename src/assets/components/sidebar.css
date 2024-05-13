@@ -4,9 +4,14 @@
 }
 .sidebar {
     width: 200px;
-    height: 100%;
-    
+    height: 100vh;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgba(128, 128, 128, 0.088);
 }
 .logo img  {
@@ -18,6 +23,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
+    padding-left: 10px;
     font-weight: 300;
     transition: 0.2s ease;
     border-radius: 3px;
@@ -31,6 +37,7 @@
     font-size: 1rem;
     margin-left: 1rem;
     outline: none;
+    width: 100%;
 }
 .side:hover {
     background-color: rgba(128, 128, 128, 0.084);
