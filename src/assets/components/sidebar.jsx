@@ -9,8 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { open, close } from "../features/newnote.js";
 import { openSettings, closeSettings } from "../features/showSettings.js";
+import { Link } from "react-router-dom";
 
 export default function sidebar() {
+  // const [activeTab, setActiveTab] = useState(allnotes)
   // const [notes, setNotes] = useState([]);
   const [search, setSearch] = useState("");
   // const [selectedNote, setSelectedNote] = useState(null);
@@ -59,7 +61,7 @@ export default function sidebar() {
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search"
-        />{" "}
+        />
       </div>
       
       <button className="newNote side" onClick={() => dispatch(open())}>
@@ -78,10 +80,11 @@ export default function sidebar() {
         
         
       </button>
-      <button className="Favourite side" >
+      
+      <Link to="/favourites" className="Favourite side" >
         <i className="fa-regular fa-heart"></i>
         <h1>Favourite </h1>
-      </button>
+      </Link>
       <button className="work side" >
       <i className="fa-solid fa-briefcase"></i>
         <h1>Work </h1>

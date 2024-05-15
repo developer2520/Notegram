@@ -8,6 +8,7 @@ import SearchNote from './assets/components/searchNote.jsx'
 import Data from './assets/components/data.jsx'
 import Notes from './assets/pages/dashboard/notes.jsx'
 import Test from './test.jsx'
+import Favourites from './assets/components/favourites.jsx'
 
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
@@ -30,6 +31,7 @@ function App() {
       <Route path='/data' element={<Data />} />
       <Route path='/notes' element={<Notes />} />
       <Route path='/test' element={<Test />} />
+      <Route path='/favourites' element={<Favourites />} />
       
 
     </Routes>
