@@ -9,6 +9,10 @@ import Data from './assets/components/data.jsx'
 import Notes from './assets/pages/dashboard/notes.jsx'
 import Test from './test.jsx'
 import Favourites from './assets/components/favourites.jsx'
+import AllNotes from './assets/components/allnotes.jsx'
+import Work from './assets/components/work.jsx'
+import Settings from './assets/components/settings.jsx'
+
 
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
@@ -32,12 +36,15 @@ function App() {
       <Route path='/notes' element={<Notes />} />
       <Route path='/test' element={<Test />} />
       <Route path='/favourites' element={<Favourites />} />
+      <Route path='/home' element={<AllNotes />} />
+      <Route path='/work' element={<Work />} />
+      <Route path='/settings' element={<Settings />} />
       
 
     </Routes>
     
 
-    <Link to='signin'/>
+    
     
     </BrowserRouter>
       

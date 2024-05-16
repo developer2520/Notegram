@@ -1,17 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: #E8E8E6;
 }
 
-.category {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-around;
-}
-.category button {
-  width: unset;
-  background-color: rgba(128, 128, 128, 0.502);
-  height: 40px;
-}
 
 .notee {
   padding: 1rem;
@@ -19,6 +14,7 @@ body {
   border-radius: 1rem;
   background-color: rgb(255, 255, 255);
   position: relative;
+  z-index: 10;
 }
 
 .notes_div {
@@ -28,6 +24,7 @@ body {
   grid-template-rows: repeat(3, 200px);
   /* Change the height as needed */
   gap: 20px;
+  z-index: 1; 
 }
 .noteDate {
   position: absolute;
@@ -45,6 +42,18 @@ body {
   color: rgba(0, 0, 0, 0.382);
 }.topOfNote i:hover {
   color: black;
+}
+.category {
+  background-color: dodgerblue;
+  position: absolute;
+top: 2px;
+
+border-radius: 9px;
+left: auto;
+}
+.category i {
+  color: white;
+  padding: 3px;
 }
 .ellipsis {
   width: 30px;
@@ -65,4 +74,26 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+}
+.empty-icon {
+  font-size: 10rem;
+  opacity: 40%;
+}
+.EmptyNotes {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  opacity: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.EmptyNotes button {
+  width: 50px;
+  padding: 0;
+  margin: auto;
 }

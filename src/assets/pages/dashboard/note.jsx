@@ -10,12 +10,32 @@ function Note({ note }) {
     setSettings(true)
     setSettings(!settings)
   }
+
+const categoryAnalyzer = () => {
+  if (note.category === "personal") {
+    return  <i class="fa-solid fa-user"></i> 
+  }
+  else if (note.category === "favourite") {
+    return <i class="fa-regular fa-heart"></i> 
+  }
+  else if (note.category === "work") {
+    return <i class="fa-solid fa-briefcase"> </i>
+  }
+  else if (note.category === "study") {
+    return <i class="fa-solid fa-school"></i>
+  }
+  
+
+}
   
   
   return (
     <div className="notee">
       <div className="topOfNote">
+      <p className='category'>{categoryAnalyzer()}</p>
       <h2>{note.title}</h2>
+      
+      
       <button onClick={toggleSettings}  className="ellipsis">
       <i className="fa-solid fa-ellipsis-vertical"></i>
 
@@ -24,7 +44,7 @@ function Note({ note }) {
 
       </div>
 
-      {settings &&  <NoteMore /> }
+      {settings &&  <NoteMore note={note} /> }
       
      
       <p className='note_description'> {note.description}</p>

@@ -11,10 +11,11 @@
     padding: 1rem;
     border-radius: 10px;
     background-color: white;
-    z-index: 1;
+    z-index: 100000000;
     transition: 0.4s ease;
+    
 }
-.note button {
+.note .submitbutton {
     width: 100px;
     background-color: blue;
     height: 50px;
@@ -55,4 +56,9 @@
     padding: 0;
     padding: none;
     background-color: rgb(255, 255, 255);
+}
+
+.categorySelector {
+    display: flex;
+    justify-content: space-between;
 }

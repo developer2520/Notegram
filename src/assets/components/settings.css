@@ -1,0 +1,21 @@
+.settingsCard {
+    width: 70vw;
+    height: 90vh;
+    
+    margin: auto;
+   
+}
+.settingsMain {
+    display: flex;
+}
+
+.button {
+   width: 200px;
+
+}
+.deleting_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

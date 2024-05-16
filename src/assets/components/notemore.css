@@ -6,6 +6,7 @@
 .notemore_div {
   width: 100px;
   display: flex;
+  gap: 2px;
   flex-direction: column;
   border-radius: 6px;
   height: 150px;

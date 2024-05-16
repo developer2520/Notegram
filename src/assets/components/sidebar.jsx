@@ -74,21 +74,21 @@ export default function sidebar() {
 
 
 
-      <button className="main side" >
+      <Link to="/home" className="main side" >
       <i className="fa-solid fa-house"></i>
         <h1>All Notes </h1>
         
         
-      </button>
+      </Link>
       
       <Link to="/favourites" className="Favourite side" >
         <i className="fa-regular fa-heart"></i>
         <h1>Favourite </h1>
       </Link>
-      <button className="work side" >
+      <Link to='/work' className="work side" >
       <i className="fa-solid fa-briefcase"></i>
         <h1>Work </h1>
-      </button>
+      </Link>
       <button className="study side" >
       <i className="fa-solid fa-school"></i>
         <h1>Study </h1>
@@ -101,9 +101,9 @@ export default function sidebar() {
 
       <div className="sidebar_bottom">
 
-      <button className="settings side"onClick={() => dispatch(openSettings())} >
+      <Link to='/settings' className="settings side">
         <i className="fa-solid fa-gear"  ></i> <h1>Settings</h1>
-      </button>
+      </Link>
 
 
       </div>
@@ -111,7 +111,7 @@ export default function sidebar() {
       
 
       {newNote && <NewNote />}
-       {showSettings && <Settings />}  
+       
 
       
     </div>
