@@ -16,6 +16,7 @@ export default function realnotes() {
   return (
     <>
       <div className="main_grid">
+        <h1 className="main-title">All Notes</h1>
         <div className="notes_div">
           {/* {notes.map((note, key) => (
       <Note key={key} note={note} />

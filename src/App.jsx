@@ -12,6 +12,8 @@ import Favourites from './assets/components/favourites.jsx'
 import AllNotes from './assets/components/allnotes.jsx'
 import Work from './assets/components/work.jsx'
 import Settings from './assets/components/settings.jsx'
+import Study from './assets/components/study.jsx'
+import Personal from './assets/components/personal.jsx'
 
 
 
@@ -39,6 +41,8 @@ function App() {
       <Route path='/home' element={<AllNotes />} />
       <Route path='/work' element={<Work />} />
       <Route path='/settings' element={<Settings />} />
+      <Route path='/study' element={<Study />} />
+      <Route path='/personal' element={<Personal />} />
       
 
     </Routes>

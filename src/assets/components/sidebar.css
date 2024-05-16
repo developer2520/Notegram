@@ -5,9 +5,9 @@
 .sidebar {
     width: 200px;
     height: 100vh;
-    
+    /* position: sticky;
     top: 0;
-    left: 0; 
+    left: 0;  */
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -62,4 +62,13 @@
     font-weight: 400;
     color: rgba(0, 0, 0, 0.445);
     
+}
+.black_screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+    background-color: rgba(0, 0, 0, 0.524);
+    z-index: 1000;
 }

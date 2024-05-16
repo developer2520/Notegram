@@ -89,14 +89,14 @@ export default function sidebar() {
       <i className="fa-solid fa-briefcase"></i>
         <h1>Work </h1>
       </Link>
-      <button className="study side" >
+      <Link to='/study' className="study side" >
       <i className="fa-solid fa-school"></i>
         <h1>Study </h1>
-      </button>
-      <button className="personal side" >
+      </Link>
+      <Link to='/personal' className="personal side" >
       <i className="fa-solid fa-user"></i>
-        <h1>Study </h1>
-      </button>
+        <h1>Personal </h1>
+      </Link>
       </div>
 
       <div className="sidebar_bottom">
@@ -110,7 +110,15 @@ export default function sidebar() {
 
       
 
-      {newNote && <NewNote />}
+      {newNote && <>
+
+      <div className="black_screen">
+
+        <NewNote />
+      </div>
+      
+      
+      </>}
        
 
       

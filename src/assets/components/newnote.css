@@ -11,7 +11,7 @@
     padding: 1rem;
     border-radius: 10px;
     background-color: white;
-    z-index: 100000000;
+    z-index: 10;
     transition: 0.4s ease;
     
 }
@@ -47,8 +47,12 @@
 }
 .topofthenewnote i {
     font-size: 30px;
-    /* transform: translate(250%); */
-    color: red;
+    
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+.topofthenewnote i:hover {
+    color: red
 }
 .topofthenewnote button {
     width: 40px;

@@ -13,16 +13,16 @@ function Note({ note }) {
 
 const categoryAnalyzer = () => {
   if (note.category === "personal") {
-    return  <i class="fa-solid fa-user"></i> 
+    return  <p className='personalCategory catt1'>personal</p>
   }
   else if (note.category === "favourite") {
-    return <i class="fa-regular fa-heart"></i> 
+    return <p className='personalCategory catt2'>favourites</p>
   }
   else if (note.category === "work") {
-    return <i class="fa-solid fa-briefcase"> </i>
+    return <p className='personalCategory catt3'>work</p>
   }
   else if (note.category === "study") {
-    return <i class="fa-solid fa-school"></i>
+    return <p className='personalCategory catt4'>study</p>
   }
   
 

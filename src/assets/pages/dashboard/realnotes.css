@@ -11,10 +11,10 @@ body {
 .notee {
   padding: 1rem;
   width: 300px;
-  border-radius: 1rem;
+  border-radius: 10px;
   background-color: rgb(255, 255, 255);
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .notes_div {
@@ -43,13 +43,14 @@ body {
 }.topOfNote i:hover {
   color: black;
 }
-.category {
-  background-color: dodgerblue;
+.personalCategory {
+  
   position: absolute;
-top: 2px;
+top: 7px;
 
-border-radius: 9px;
-left: auto;
+border-radius: 7px;
+padding: 2px;
+left: 7px
 }
 .category i {
   color: white;
@@ -96,4 +97,32 @@ left: auto;
   width: 50px;
   padding: 0;
   margin: auto;
+}
+
+.catt1 {
+  background-color: rgba(30, 143, 255, 0.266);
+  color: dodgerblue;
+
+  
+}
+.catt2 {
+  background-color: rgba(255, 0, 0, 0.266);
+  color: red;
+
+  
+}
+.catt3 {
+  background-color: rgba(0, 128, 0, 0.266);
+  color: green;
+
+  
+}
+.catt4 {
+  background-color: rgba(128, 0, 128, 0.266);
+  color: purple;
+
+  
+}
+.main-title {
+  padding: 1rem;
 }
