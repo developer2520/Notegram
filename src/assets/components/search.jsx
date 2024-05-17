@@ -1,7 +1,7 @@
 import React from 'react'
 import './search.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { close } from '../features/newnote'
+import { closeSearch } from '../features/showSearch'
 
 
 
@@ -15,9 +15,9 @@ export default function search() {
         <form>
             <div className="input_div">
             <i class="fa-solid fa-magnifying-glass searchIcon"></i>
-            <input type="search" placeholder='Search your notes' />
+            <input type="text" placeholder='Search your notes' />
 
-            <button className="closeButton" onClick={() => dispatch(close())}>
+            <button className="closeButton" onClick={() => dispatch(closeSearch())}>
             <i class="fa-solid fa-circle-xmark xmark"></i>
 
             </button>
