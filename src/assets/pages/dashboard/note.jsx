@@ -2,7 +2,7 @@
 import {React, useState} from 'react';
 import NoteMore from '../../components/noteMore.jsx'
 
-function Note({ note }) {
+function Note({ note, time }) {
 
   const [settings, setSettings] = useState(false)
 
@@ -44,14 +44,15 @@ const categoryAnalyzer = () => {
 
       </div>
 
-      {settings &&  <NoteMore note={note} /> }
+      {settings &&  <NoteMore note={note} time={time} /> }
       
      
       <p className='note_description'> {note.description}</p>
       {/* You can include other details like image, emoji, etc. if needed */}
       {/*    */}
       {/* <p><strong>Emoji:</strong> {note.emoji}</p> */}
-      <p className='noteDate'><strong></strong> {note.date}</p>
+      <p className='noteDate'> {note.date}</p>
+      
     </div>
   );
 }

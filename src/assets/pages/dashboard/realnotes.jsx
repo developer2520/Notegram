@@ -7,7 +7,8 @@ import { open } from "../../features/newnote.js";
 import { useDispatch } from "react-redux";
 
 export default function realnotes() {
-  const NotesList = useSelector((state) => state.notes.value);
+  const NotesRedux = useSelector((state) => state.notes.value);
+  const NotesList = NotesRedux.slice().reverse()
 
   const dispatch = useDispatch()
 
@@ -24,14 +25,15 @@ export default function realnotes() {
 
          
           {NotesList.length === 0 ? (<div className="EmptyNotes">
-          <i class="fa-solid fa-note-sticky  empty-icon"></i>
+          <i className="fa-solid fa-note-sticky  empty-icon"></i>
           <p>You don't have notes right now.To create a new Note, click the <button onClick={() => dispatch(open())}>new</button> `</p>
 
 
           </div>) : (
-             NotesList.map((note, key) => (
+            NotesList.map((note, key) => (
               <Note key={key} note={note} />
             ))
+            
   
           ) }
         </div>

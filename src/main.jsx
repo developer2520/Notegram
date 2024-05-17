@@ -9,12 +9,15 @@ import newnoteReducer from './assets/features/newnote.js'
 import { newnote } from './assets/features/newnote.js'
 import showSettingsReducer from './assets/features/showSettings.js'
 import {showSettings} from  './assets/features/showSettings.js'
+import showSearchReducer from './assets/features/showSearch.js'
+import showSearch from './assets/features/showSearch.js'
 
 const store = configureStore({
   reducer: {
     notes: NotesReducer,
     newnote: newnoteReducer,
-    showSettings: showSettingsReducer
+    showSettings: showSettingsReducer,
+    showSearch: showSearchReducer
 
   }
 })

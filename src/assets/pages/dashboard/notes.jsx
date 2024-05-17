@@ -93,7 +93,7 @@ export default function notes({ }) {
   //     emoji: "😒"
   //   },
   //   {
-  //     title: "Cooking Class",
+  //     title: "Cooking className=",
   //     date: "2024-06-05",
   //     description: "Learn to make a new dish.",
   //     img: "durov.jpg",
