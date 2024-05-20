@@ -11,12 +11,16 @@ body {
 .notee {
   padding: 1rem;
   width: 300px;
+  height: auto;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   position: relative;
   z-index: 1;
+  
 }
-
+Link {
+  text-decoration: none;
+}
 .notes_div {
   display: grid;
   margin: 1rem;
@@ -45,8 +49,9 @@ body {
 }
 .personalCategory {
   
-  position: absolute;
+  
 top: 7px;
+display: inline;
 
 border-radius: 7px;
 padding: 2px;

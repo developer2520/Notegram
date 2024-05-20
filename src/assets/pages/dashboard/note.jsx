@@ -1,8 +1,14 @@
 // NoteDetails.jsx
 import {React, useState} from 'react';
 import NoteMore from '../../components/noteMore.jsx'
+import SeperateNote from '../../components/seperateNote.jsx'
+import {Link} from 'react-router-dom'
+
+
+
 
 function Note({ note, time }) {
+  
 
   const [settings, setSettings] = useState(false)
 
@@ -30,9 +36,12 @@ const categoryAnalyzer = () => {
   
   
   return (
-    <div className="notee">
-      <div className="topOfNote">
+
+    <Link to={`/seperatenote/${note.id}`} >
+    <div className="notee" >
       <p className='category'>{categoryAnalyzer()}</p>
+      <div className="topOfNote">
+      
       <h2>{note.title}</h2>
       
       
@@ -46,6 +55,7 @@ const categoryAnalyzer = () => {
 
       {settings &&  <NoteMore note={note} time={time} /> }
       
+      
      
       <p className='note_description'> {note.description}</p>
       {/* You can include other details like image, emoji, etc. if needed */}
@@ -54,6 +64,7 @@ const categoryAnalyzer = () => {
       <p className='noteDate'> {note.date}</p>
       
     </div>
+    </Link>
   );
 }
 

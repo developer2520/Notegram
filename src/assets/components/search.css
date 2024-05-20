@@ -64,3 +64,21 @@
     right: 1rem;
     
 }
+
+.note-div {
+    background-color: gray;
+    width: 10px;
+}
+.emptyNotes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: gray;
+}
+.emptyNotes i {
+font-size: 5rem;
+}
