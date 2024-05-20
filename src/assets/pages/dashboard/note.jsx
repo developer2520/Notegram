@@ -37,7 +37,7 @@ const categoryAnalyzer = () => {
   
   return (
 
-    <Link to={`/seperatenote/${note.id}`} >
+    <Link style={{textDecoration: "none",color: "black"}} to={`/seperatenote/${note.id}`} >
     <div className="notee" >
       <p className='category'>{categoryAnalyzer()}</p>
       <div className="topOfNote">

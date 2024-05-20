@@ -13,6 +13,8 @@
       const dispatch = useDispatch()
       const [search, setSearch] = useState("");
       const noteModal = useRef();
+
+      
       
       const filteredNotes = Array.isArray(yourNotes)
       ? yourNotes.filter(note => 
